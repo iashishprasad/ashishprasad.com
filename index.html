@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ashish Prasad — Builder, Engineer, Writer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The personal site of Ashish Prasad — building thoughtful products, writing about engineering and craft.">
+  <link rel="canonical" href="https://ashishprasad.com/">
+  <meta property="og:title" content="Ashish Prasad">
+  <meta property="og:description" content="Builder, Engineer, Writer">
+  <meta property="og:url" content="https://ashishprasad.com/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <link rel="preload" href="/assets/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">AP</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Hi, I’m <span class="accent">Ashish</span>.</h1>
+        <p class="lead">I build thoughtful products and write about engineering, systems, and craft.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="#contact">Say hello</a>
+        </div>
+        <ul class="social">
+          <!-- TODO: Replace # with your links -->
+          <li><a href="#" aria-label="GitHub">GitHub</a></li>
+          <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="#" aria-label="Twitter">Twitter</a></li>
+          <li><a href="#writing" aria-label="Blog">Blog</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          I’m an engineer focused on shipping clean, reliable software and clear ideas. I enjoy designing
+          systems end‑to‑end — from product thinking and architecture to implementation and polish.
+        </p>
+        <p>
+          Lately, I’m exploring performance, developer experience, and the small details that make products
+          feel intuitive and fast.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div id="projects-grid" class="grid"></div>
+
+        <template id="project-card">
+          <article class="card">
+            <div class="card-head">
+              <h3 class="card-title"></h3>
+              <span class="tag"></span>
+            </div>
+            <p class="card-desc"></p>
+            <div class="card-actions">
+              <a class="btn small" target="_blank" rel="noopener" data-live>Live</a>
+              <a class="btn small outline" target="_blank" rel="noopener" data-code>Code</a>
+            </div>
+          </article>
+        </template>
+
+        <script>
+          // Edit your projects here. Minimal fuss.
+          const PROJECTS = [
+            {
+              title: "Signalboard",
+              tag: "Product",
+              desc: "A lightweight status and incident page with beautiful, fast UX.",
+              live: "#",   // TODO: add live URL
+              code: "#"    // TODO: add repo URL
+            },
+            {
+              title: "Trimdown",
+              tag: "Tooling",
+              desc: "CLI to analyze and trim JS bundles with human‑readable reports.",
+              live: "#",
+              code: "#"
+            },
+            {
+              title: "Notes on Systems",
+              tag: "Writing",
+              desc: "A series on reliability patterns, tradeoffs, and pragmatic design.",
+              live: "#",
+              code: ""
+            }
+          ];
+          window.__PROJECTS__ = PROJECTS;
+        </script>
+      </div>
+    </section>
+
+    <section id="writing" class="section alt">
+      <div class="container">
+        <h2>Writing</h2>
+        <ul class="list">
+          <!-- TODO: Replace with your posts or link to an external blog -->
+          <li>
+            <a href="#">Latency isn’t just a number</a>
+            <span class="meta">— Engineering • 8 min</span>
+          </li>
+          <li>
+            <a href="#">Designing for the empty state</a>
+            <span class="meta">— Product • 6 min</span>
+          </li>
+          <li>
+            <a href="#">The cost of cleverness</a>
+            <span class="meta">— Opinion • 5 min</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>I read every message. If you want to build something together, I’d love to hear from you.</p>
+        <div class="contact-cta">
+          <!-- TODO: Replace with your email -->
+          <a class="btn primary" href="mailto:hello@ashishprasad.com">Email me</a>
+        </div>
+        <p class="fine">Prefer forms? You can wire this to Formspree or Netlify Forms later.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot">
+      <span>© <span id="year"></span> Ashish Prasad</span>
+      <a href="/sitemap.xml">Sitemap</a>
+      <a href="/robots.txt">Robots</a>
+    </div>
+  </footer>
+</body>
+</html>
